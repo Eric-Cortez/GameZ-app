@@ -1,0 +1,21 @@
+/* TODO Add site wide styles */
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+:root {
+    --skyGray: rgba(158, 158, 158, .4);
+    --eerie: #1B1B1B;
+}

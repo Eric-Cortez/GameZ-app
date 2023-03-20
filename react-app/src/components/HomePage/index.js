@@ -36,8 +36,8 @@ function HomePage() {
                                 alt={product?.name}
                             />
                         </Link>
-                        <figcaption className="fig-caption">
-                            <Link to={`/products/${product?.id}`}>{product?.name}</Link>
+                        <figcaption className="fig-caption" >
+                            <Link className="fig-caption" to={`/products/${product?.id}`}>{product?.name}</Link>
                         </figcaption>
                     </figure>
                 ))}
@@ -73,7 +73,7 @@ function HomePage() {
             </div>
               <div className='site-info-footer'>
                 <h4>Have a question? Well, we’ve got some answers.</h4>
-                <a href="https://github.com/gitxandalf/gameZ/blob/main/README.md">Go to Help Center</a>
+                <a className="home-btn" href="https://github.com/gitxandalf/gameZ/blob/main/README.md">Go to Help Center</a>
             </div>
             <br/>
         </div >

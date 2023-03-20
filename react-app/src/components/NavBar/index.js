@@ -10,31 +10,34 @@ import shoppingCartIcon from '../../images/shopping-cart.png'
 import { loadCart } from '../../store/shoppingCart'
 import { getCategories } from '../../store/category';
 import { getProducts } from '../../store/product';
+import { useLocation } from 'react-router-dom';
 
 let queriedProducts;
 let queriedCategorys;
 
 const NavBar = ({ search, setSearch }) => {
   const history = useHistory();
+  const location = useLocation();
   const dispatch = useDispatch();
   const sessionUser = useSelector(state => state?.session?.user);
   const allCategories = useSelector(state => state?.category?.entries)
   const shoppingCart = useSelector(state => state?.shoppingCart?.current_shopping_cart?.cart_items)
   const [preview, setPreview] = useState(false)
-  const [pathName, setPathName] = useState(window.location.pathname);
-
+  const [pathName, setPathName] = useState(location.pathname);
+  console.log(location.pathname, "PATH")
   useEffect(() => {
     if (sessionUser) dispatch(loadCart(sessionUser.id));
   }, [dispatch, sessionUser])
 
   useEffect(() => {
-    setPathName(window.location.pathname);
+    setPathName(location.pathname);
     window.scrollTo(0, 0);
-  }, [dispatch, sessionUser, pathName])
+  }, [dispatch, sessionUser, pathName, location.pathname])
 
   useEffect(() => {
-    if (window.location.pathname !== '/search-results') setSearch('');
-  }, [setSearch])
+    console.log(location)
+    if (location.pathname !== '/search-results') setSearch('');
+  }, [location, setSearch])
 
   useEffect(() => {
     if (!sessionUser) setPreview(false);
@@ -75,7 +78,8 @@ const NavBar = ({ search, setSearch }) => {
       if (searchProductResponse) {
         const queryProductResponse = searchProductResponse;
         queriedProducts = queryProductResponse.products;
-        if (window.location.pathname === '/search-results') {
+        setSearch('');
+        if (location.pathname === '/search-results') {
           history.push('/')
           history.push('/search-results');
         }
@@ -83,6 +87,7 @@ const NavBar = ({ search, setSearch }) => {
       };
     }
   }
+
 
   return (
     <nav>

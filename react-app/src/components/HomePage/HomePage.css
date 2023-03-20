@@ -1,140 +1,145 @@
-.category-links a {
-    color:black
-}
-
 #home-page {
+    min-height: calc(100vh - 200px);
     display: flex;
     flex-direction: column;
-    background-color: white;
+    justify-content: space-between;
+    margin-bottom: 200px !important;
 }
-
-.site-info-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 12.6%;
-    background-color: #c2c2f0;
-}
-
-.site-info-header a {
-    color: black;
-    text-decoration: underline;
-    transition: opacity 200ms ease-out;
-}
-
-.site-info-header a:hover {
-    opacity: .5;
-    color: #737373;
-}
-
-.site-info {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    background-color: #c2c2f0;
-    /* padding: 25px */
-    /* grid-template-columns:auto; */
-    /* grid-row:auto; */
-    /* justify-content: center; */
-}
-
-.community {
-    margin-top: 0;
-    width: 750px;
-    padding: 25px;
-}
-
-.support {
-    margin-top: 0;
-    width: 750px;
-    padding: 25px;
-}
-
-.peace {
-    margin-top: 0;
-    width: 750px;
-    padding: 25px;
-}
-
-.site-info-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #c2c2f0;
-    padding: 15px;
-}
-
-.site-info-footer a {
-    color: black;
-    border: 2px solid var(--eerie);
-    border-radius: 50px;
-    padding:10px;
-}
-
-.site-info-footer a:hover {
-    transform: scaleX(1.015) scaleY(1.035) perspective(1px);
-    transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42),background 150ms ease-out,box-shadow 200ms ease-out;
-}
-
-/* .home-header-bg {
-    height: 150px;
-    z-index: 1;
-    position: absolute;
-    background-color: #c2c2f0;
-} */
 
 .home-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 50px;
-    margin-top: 0px;
-    height: 150px;
-    background-color: #c2c2f0;
-    width: 100vw;
-    align-items: center;
-    font-weight: 200;
-    margin-bottom: 0px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #3c3c3c;
 }
 
 .games-we-love {
-    /* position: absolute; */
-    margin-top: -55px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
 }
 
-.games-we-love > *:hover {
-    border-bottom: 1px solid black;
-}
-
-.games-we-love a {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    color: black;
+.games-we-love-link {
+    display: block;
+    text-decoration: none;
+    position: relative;
 }
 
 .games-we-love-image {
-    border: 1px solid transparent;
-    border-radius: 50%;
-    height: 100px;
-    max-width: 100px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
 }
 
 .games-we-love-image:hover {
-    /* border-bottom: 1px solid black; */
-    box-shadow: 5px 5px 10px gray;
-    transform: scaleX(1.015) scaleY(1.035) perspective(1px);
-    transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42),background 150ms ease-out,box-shadow 200ms ease-out;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .fig-caption {
-    margin-top: 5px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.site-info-header {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.site-info-header h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.site-info-header a {
+    font-size: 16px;
+    color: #3c3c3c;
+    text-decoration: none;
+}
+
+.site-info-header a:hover {
+    text-decoration: underline;
+}
+
+.site-info {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+.support,
+.community,
+.peace {
+    text-align: center;
+}
+
+.support h3,
+.community h3,
+.peace h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.support p,
+.community p,
+.peace p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.site-info-footer {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.site-info-footer h4 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.site-info-footer a {
+    font-size: 16px;
+    color: #3c3c3c;
+    text-decoration: none;
+}
+
+.site-info-footer a:hover {
+    text-decoration: underline;
+}
+
+.games-we-love-image-wrapper {
+    position: relative;
+    padding-top: 56.25%;
+    /* 16:9 aspect ratio */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.games-we-love-image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.2s ease-in-out;
+}
+
+.games-we-love-image-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.fig-caption {
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .games-we-love {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
 }

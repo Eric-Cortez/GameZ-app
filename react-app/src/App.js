@@ -47,7 +47,6 @@ function App() {
     <BrowserRouter>
 
       <NavBar search={search} setSearch={setSearch} />
-
       <Switch>
 
         <Route exact path='/login' >

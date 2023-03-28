@@ -48,30 +48,24 @@ function App() {
 
       <NavBar search={search} setSearch={setSearch} />
       <Switch>
-
         <Route exact path='/login' >
           <LoginForm setSearch={setSearch} />
         </Route>
-
         <Route exact path='/sign-up'>
           <SignUpForm setSearch={setSearch} />
         </Route>
         <ProtectedRoute exact path='/users'>
           <UsersList />
         </ProtectedRoute>
-
         <ProtectedRoute exact path='/users/:userId' >
           <User />
         </ProtectedRoute>
-
         <ProtectedRoute exact path='/products/add-product' >
           <AddProductForm products={products} setSearch={setSearch} />
         </ProtectedRoute>
-
         <ProtectedRoute exact path='/shoppingCart/:id' >
           <ShoppingCart />
         </ProtectedRoute>
-
         <ProtectedRoute exact path='/shoppingCart/:id/checkout' >
           <Checkout />
         </ProtectedRoute>

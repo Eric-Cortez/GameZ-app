@@ -88,7 +88,6 @@ const NavBar = ({ search, setSearch }) => {
     }
   }
 
-
   return (
     <nav>
 

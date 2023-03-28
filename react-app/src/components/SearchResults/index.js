@@ -8,7 +8,6 @@ import "./SearchResults.css"
 
 function SearchResults({ products, categories, search }) {
     const dispatch = useDispatch()
-
     const allUsers = useSelector(state => state?.product?.usersEntries)
     const sessionUser = useSelector(state => state?.session?.user);
 

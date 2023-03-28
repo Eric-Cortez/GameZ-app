@@ -69,7 +69,6 @@ function HomePage() {
                     <p>Your privacy is the highest priority of our dedicated team.
                         And if you ever need assistance, we are always ready to step in for support.</p>
                 </div>
-
             </div>
               <div className='site-info-footer'>
                 <h4>Have a question? Well, we’ve got some answers.</h4>

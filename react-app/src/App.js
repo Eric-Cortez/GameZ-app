@@ -69,7 +69,6 @@ function App() {
         <ProtectedRoute exact path='/shoppingCart/:id/checkout' >
           <Checkout />
         </ProtectedRoute>
-
         <ProtectedRoute exact path='/shoppingCart/:checkedOutCartId/orderDetails' >
           <OrderDetails />
         </ProtectedRoute>

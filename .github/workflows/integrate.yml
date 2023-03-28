@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: PWD
-        use: pwd
+        run: pwd
       - name: Navigate to project directory
         run: cd react-app
       - uses: actions/setup-node@v1

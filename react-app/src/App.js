@@ -56,7 +56,6 @@ function App() {
         <Route exact path='/sign-up'>
           <SignUpForm setSearch={setSearch} />
         </Route>
-
         <ProtectedRoute exact path='/users'>
           <UsersList />
         </ProtectedRoute>

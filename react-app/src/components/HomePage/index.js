@@ -24,7 +24,7 @@ function HomePage() {
 
     return (
         <div id="home-page">
-            <img src="https://example.com/image.jpg" alt="Gamer background" />
+            {/* <img src="https://example.com/image.jpg" alt="Gamer background" /> */}
             <p className="home-header">Games Our Authors Love!</p>
             <div className="games-we-love">
                 {allProducts?.slice(0, 12).map((product) => (

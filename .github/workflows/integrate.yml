@@ -9,8 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: PWD
+        use: pwd
       - name: Navigate to project directory
-        run: pwd
         run: cd react-app
       - uses: actions/setup-node@v1
         with:

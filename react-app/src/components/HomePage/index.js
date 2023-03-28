@@ -24,8 +24,10 @@ function HomePage() {
 
     return (
         <div id="home-page">
-            {/* <img src="https://example.com/image.jpg" alt="Gamer background" /> */}
-            <p className="home-header">Games Our Authors Love!</p>
+            <div style={{ backgroundColor: "#B22BF3" }}>
+                <p className="home-header">Games Our Authors Love!</p>
+            </div>
+
             <div className="games-we-love">
                 {allProducts?.slice(0, 12).map((product) => (
                     <figure key={product?.id}>
@@ -70,11 +72,11 @@ function HomePage() {
                         And if you ever need assistance, we are always ready to step in for support.</p>
                 </div>
             </div>
-              <div className='site-info-footer'>
+            <div className='site-info-footer'>
                 <h4>Have a question? Well, we’ve got some answers.</h4>
                 <a className="home-btn" href="https://github.com/gitxandalf/gameZ/blob/main/README.md">Go to Help Center</a>
             </div>
-            <br/>
+            <br />
         </div >
     );
 }

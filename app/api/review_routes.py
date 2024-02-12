@@ -1,5 +1,4 @@
 
-from turtle import title
 from flask import Blueprint, request
 from flask_login import login_required
 from app.models import Review, User, db

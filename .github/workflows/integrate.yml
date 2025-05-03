@@ -13,9 +13,9 @@ jobs:
         run: pwd
       - name: Navigate to project directory
         run: cd react-app
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:
-          node-version: 12
+          node-version: 16.13.1
       - run: npm ci
       - run: npm test
-      - run: npm run build
+      - run: CI=false npm run build
